@@ -297,7 +297,7 @@
   1.05)
 
 (defn long-bone-stations
-  "The station table `long-bone` sweeps: 13 `{:y :radius :offset}` maps.
+  "The station table `long-bone` sweeps: 15 `{:y :radius :offset}` maps.
 
    Public because it is the shape, written once as a readable table of
    (fraction-of-length, radius-multiple) pairs, and a caller that wants to know
@@ -308,7 +308,16 @@
         e (clampd epiphysis-frac 0.05 0.28)
         ;; one end, tip → metaphysis, as (fraction of the epiphysis span, radius ×
         ;; that end's flare). `nil` means "hand over to the shaft".
-        end [[0.00 0.42] [0.18 0.86] [0.42 1.00] [0.72 0.74] [1.00 nil]]
+        ;;
+        ;; The first two entries are a DOME, and they are not cosmetic. With the
+        ;; tip at 0.42 (as the first version had it) the end cap is a disc of 42%
+        ;; of the condyle's radius, standing perpendicular to the axis: it faces
+        ;; away from the light on one end of every bone and renders as a black
+        ;; ellipse, so the bone reads as an open tube. An epiphysis is convex.
+        ;; Measured after the change: the cap is 16% of the condyle radius and the
+        ;; two dome bands differ by about 11 degrees, well inside the 60-degree
+        ;; crease threshold, so it stays smooth rather than becoming a hard rim.
+        end [[0.00 0.16] [0.07 0.55] [0.20 0.86] [0.44 1.00] [0.74 0.74] [1.00 nil]]
         shaft [[0.32 0.96] [0.50 0.92] [0.68 0.96]]
         ;; the tip multiplier is the flare's own and is NOT floored at the
         ;; metaphysis: flooring it (as the first draft did) squares the end of the
@@ -340,7 +349,7 @@
    Exactly `:length` tall. With `:bow 0` it is exactly
    2·max(`:proximal-flare`, `:distal-flare`, 1.05)·`:shaft-radius` wide in x, and
    that × `:flatten` deep in z — so a caller can assert the girth it asked for.
-   13 stations, hence `(* 26 :sectors)` triangles whatever the crease splits do."
+   15 stations, hence `(* 30 :sectors)` triangles whatever the crease splits do."
   ([] (long-bone {}))
   ([opts]
    (let [o (merge long-bone-defaults opts)]
