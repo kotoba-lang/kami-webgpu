@@ -108,9 +108,9 @@
       (is (= (count (:positions m)) (count (:normals m))))
       (is (= (count (:positions m)) (count (:uvs m))))
       (is (every? #(< -1 % (count (:positions m))) (:indices m)) "every index in range")))
-  (testing "long-bone has 13 stations, so 26·sectors triangles"
+  (testing "long-bone has 15 stations, so 30·sectors triangles"
     (doseq [s [8 16 20 24]]
-      (is (= (* 26 s) (g/tri-count (g/long-bone {:sectors s}))))))
+      (is (= (* 30 s) (g/tri-count (g/long-bone {:sectors s}))))))
   (testing "vertebral-body has 5 stations, so 10·sectors triangles"
     (doseq [s [8 16 20]]
       (is (= (* 10 s) (g/tri-count (g/vertebral-body {:sectors s})))))))
