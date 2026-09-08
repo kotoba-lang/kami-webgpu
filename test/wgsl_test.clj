@@ -4,7 +4,7 @@
    statements, and a real lighting fragment function. The compiler being .cljc, this same source is
    what the browser (shadow-cljs) emits, so the test guards the live shader too."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kami.wgsl :as w]))
 
 (deftest expressions

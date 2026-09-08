@@ -10,7 +10,7 @@
 ;;   bb wgsl-parity       # report parity only          --strict → throw on drift
 (require '[kami.shaders :as sh]
          '[kami.render-shaders :as rs]
-         '[clojure.string :as str]
+         '[kotoba.lang.text :as str]
          '[clojure.java.io :as io])
 
 (def lit-native    "../kami-engine/kami-webgpu-rs/src")          ;; isekai lit renderer (native)

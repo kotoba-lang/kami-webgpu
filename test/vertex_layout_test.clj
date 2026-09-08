@@ -25,7 +25,7 @@
    draws. `vertex-layout-declared-layout-builds-on-real-gpu` in
    playwright_vertex_layout_test.clj does that on hardware."
   (:require [clojure.test :refer [deftest is run-tests testing]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kami.webgpu.ir :as ir]))
 
 ;; --- 1. the default layout is what shipped ---------------------------------

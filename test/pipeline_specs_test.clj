@@ -1,7 +1,7 @@
 (ns pipeline-specs-test
   "Gate: fixtures/pipeline_specs.edn must stay in sync with kami.pipelines."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [babashka.process :as p]))
 
 (deftest generated-edn-in-sync-with-source

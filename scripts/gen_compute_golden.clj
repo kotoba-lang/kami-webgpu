@@ -31,7 +31,7 @@
             [kami.physics-compute :as pc]
             [cheshire.core :as json]
             [clojure.java.io :as io]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (def ^:private wgsl-fixture  "fixtures/cartpole-compute-step.wgsl")
 (def ^:private golden-fixture "fixtures/cartpole-compute-golden.json")

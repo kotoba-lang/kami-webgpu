@@ -17,7 +17,7 @@
    Why this reads source text: kami/webgpu.cljs is .cljs, so no JVM test can
    require it and ask the graphs for their passes — the same constraint
    graph_blend_test.clj documents."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests testing]]))
 
 (def executor "src/kami/webgpu.cljs")

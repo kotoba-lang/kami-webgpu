@@ -1,6 +1,6 @@
 (ns skinned-submission-cache-test
   (:require [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (deftest cached-overlay-contract-shares-palette-and-reuses-resources

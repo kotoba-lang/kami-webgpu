@@ -1,6 +1,6 @@
 (ns cascade-shadow-test
   (:require [babashka.process :as p]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]
             [kotoba.shaders :as shaders]))
 

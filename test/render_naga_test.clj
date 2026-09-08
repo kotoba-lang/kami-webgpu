@@ -5,7 +5,7 @@
    This naga-checks all 16 from the EDN when naga is available. Skips if naga is
    absent, matching the repository-local no-Rust-toolchain CI policy."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [babashka.process :as p]
             [kami.render-shaders :as rs]))
 
