@@ -1,5 +1,5 @@
 (ns ssao-graph-test
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (def source (slurp "src/kami/webgpu.cljs"))

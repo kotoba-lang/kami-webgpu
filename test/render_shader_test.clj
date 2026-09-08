@@ -4,7 +4,7 @@
    ⇒ renders identically), so the EDN can become the single source. Reads the originals from the
    co-located kami-engine checkout (skips if absent, same policy as the geometry goldens)."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [kami.render-shaders :as rs]))
 

@@ -29,7 +29,7 @@
   separate process (SDK first on its classpath) calls the live emitter. This keeps the parity
   guarantee without a namespace collision."
   (:require [clojure.test :refer [deftest is run-tests testing]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [cheshire.core :as json]
             [kami.cartpole-math :as cm]))
 

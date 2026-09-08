@@ -35,7 +35,7 @@
    fail — but it also asserts the reason is a recognized unavailability, so a
    silent \"0 assertions, all good\" cannot stand in for a run that never happened."
   (:require [cheshire.core :as json]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests testing]]
             [kami.webgpu.ir :as ir]
             [playwright-clj.core :as pw]))
@@ -239,7 +239,7 @@
             (str "the drawn pixel must be the colour the custom layout's instance "
                  "buffer declares — got " (:pixel result)))
         (testing "and it really was hardware, not the bundled software rasteriser"
-          (is (not (str/includes? (str/lower-case (str (:vendor result) " "
+          (is (not (str/includes? (str/lower (str (:vendor result) " "
                                                        (:architecture result) " "
                                                        (:description result)))
                                   "swiftshader"))

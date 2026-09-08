@@ -12,7 +12,7 @@
 (require '[kami.shaders :as sh]
          '[kami.sprite-gpu :as sg]
          '[kami.sky :as sky]
-         '[clojure.string :as str]
+         '[kotoba.lang.text :as str]
          '[clojure.java.io :as io]
          '[babashka.fs :as fs]
          '[babashka.process :as p])

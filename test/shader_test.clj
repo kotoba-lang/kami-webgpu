@@ -5,7 +5,7 @@
    parentheses are stripped. If kami.shaders/lit-fs ever drifts from the lighting that was verified
    on-screen, this fails — so the EDN can drive the renderer without a visual re-check."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kami.shaders :as sh]))
 
 ;; the exact fragment that shipped in kami.webgpu (the on-screen-verified lighting).

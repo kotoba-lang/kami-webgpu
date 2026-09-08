@@ -1,6 +1,6 @@
 (ns capture-presence-test
   (:require [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (deftest presence-is-stamped-only-after-submit-and-cleared-per-frame
