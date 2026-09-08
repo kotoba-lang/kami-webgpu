@@ -12,7 +12,7 @@
    The heavy rasterization is the GPU's; CLJS only records light per-frame commands. This
    is the web execution of the same EDN a native Rust/wgpu executor interprets (ADR-0001).
    The render-IR shape + pure constructors live in kami.webgpu.ir (.cljc, cross-platform)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.walk :as walk]
             [kami.webgpu.ir :as ir]
             [kami.webgpu.quality :as quality]

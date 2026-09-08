@@ -92,7 +92,7 @@
    works). Texture loading itself is async (`createImageBitmap`) —
    `upload-texture!` returns a Promise of a GPUTexture; callers `.then`
    before passing it to `draw!`."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kami.webgpu.render-style :as render-style]
             [kotoba.webgl :as webgl]
             [w3.webgpu :as w3]))
